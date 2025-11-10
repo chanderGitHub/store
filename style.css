@@ -1,12 +1,61 @@
-/* General Page Styling */
+/* General Styling */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  padding: 0;
   background: #fafafa;
   color: #333;
   text-align: center;
   scroll-behavior: smooth;
+}
+
+/* Sticky Navigation Bar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0.8em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #ff9500;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff9500;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #ffe259, #ffa751);
+  color: #222;
+  padding: 5em 1em 3em;
 }
 
 .container {
@@ -15,16 +64,9 @@ body {
   padding: 1em;
 }
 
-/* Header */
-header {
-  background: linear-gradient(135deg, #ffe259, #ffa751);
-  padding: 4em 1em 3em;
-  color: #222;
-}
-
 .owner-photo {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   border: 3px solid #fff;
   object-fit: cover;
@@ -37,15 +79,10 @@ h1 {
   margin-bottom: 0.3em;
 }
 
-p {
-  line-height: 1.6;
-}
-
-/* Button Style */
 .cta-button {
   display: inline-block;
-  margin-top: 1em;
-  padding: 0.8em 1.5em;
+  margin-top: 1.2em;
+  padding: 0.8em 1.8em;
   background: #ffb100;
   color: #222;
   font-weight: 600;
@@ -56,25 +93,25 @@ p {
 
 .cta-button:hover {
   background: #ff9500;
-  color: white;
+  color: #fff;
 }
 
-/* Section Styles */
+/* Sections */
 .about, .gallery, .contact {
   background: white;
-  margin: 2em auto;
+  margin: 3em auto;
   padding: 3em 1em;
   border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
 }
 
 h2 {
   font-size: 1.8em;
   color: #444;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em;
 }
 
-/* Gallery Grid */
+/* Gallery */
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -92,7 +129,7 @@ h2 {
   transform: scale(1.05);
 }
 
-/* Contact Section */
+/* Contact */
 .contact p {
   margin: 0.4em 0;
 }
@@ -114,14 +151,30 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   h1 {
     font-size: 1.8em;
   }
 
   h2 {
     font-size: 1.4em;
+  }
+
+  .nav-links {
+    display: none;
   }
 
   .cta-button {
