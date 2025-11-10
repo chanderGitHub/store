@@ -8,31 +8,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h2 class="logo">🍌 Banana Cold Store</h2>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <!-- Header Section -->
   <header>
-    <div class="container">
+    <div class="container fade-in">
       <img src="images/owner.jpg" alt="Owner Photo" class="owner-photo" />
-      <h1>Banana Cold Store</h1>
-      <p>Freshness Preserved with Care 🍌</p>
+      <h1>Freshness Preserved with Care</h1>
+      <p>Your trusted partner in banana cold storage 🍌</p>
       <a href="#contact" class="cta-button">Contact Us</a>
     </div>
   </header>
 
   <!-- About Section -->
-  <section id="about" class="about">
+  <section id="about" class="about fade-in">
     <div class="container">
       <h2>About Us</h2>
       <p>
-        Welcome to <strong>Banana Cold Store</strong> — your trusted cold storage
-        solution in Haryana. We specialize in maintaining optimal conditions for
-        banana preservation, ensuring farmers and traders get the best shelf life
-        and quality for their produce.
+        Welcome to <strong>Banana Cold Store</strong> — a reliable and modern cold storage
+        facility designed to maintain the freshness and quality of bananas.
+        Our mission is to support local farmers and traders by providing efficient
+        storage solutions and professional care for every batch stored.
       </p>
     </div>
   </section>
 
   <!-- Gallery Section -->
-  <section id="gallery" class="gallery">
+  <section id="gallery" class="gallery fade-in">
     <div class="container">
       <h2>Gallery</h2>
       <div class="image-grid">
@@ -44,8 +56,38 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact">
+  <section id="contact" class="contact fade-in">
     <div class="container">
       <h2>Contact Us</h2>
       <p><strong>Owner:</strong> Mr. Rajesh Kumar</p>
-      <p><strong>Phone:</strong> +91 98765
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Address:</strong> Near Grain Market, Kurukshetra, Haryana</p>
+      <p><strong>Email:</strong> contact@bananacoldstore.in</p>
+      <a href="tel:+919876543210" class="cta-button">📞 Call Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      © 2025 Banana Cold Store | Designed by
+      <a href="https://chandergithub.github.io/store/" target="_blank">ChanderGitHub</a>
+    </p>
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.1 };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    fadeElements.forEach(el => appearOnScroll.observe(el));
+  </script>
+</body>
+</html>
