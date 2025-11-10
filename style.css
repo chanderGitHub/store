@@ -1,5 +1,5 @@
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   background: #fafafa;
   color: #333;
@@ -7,9 +7,9 @@ body {
 }
 
 header {
-  background: linear-gradient(135deg, #ffce00, #ffef80);
-  color: #333;
-  padding: 2em 1em;
+  background: linear-gradient(135deg, #ffe259, #ffa751);
+  color: #222;
+  padding: 3em 1em;
 }
 
 .container {
@@ -25,26 +25,41 @@ header {
   border: 3px solid #fff;
   object-fit: cover;
   margin-bottom: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-h1, h2 {
-  margin: 0.5em 0;
+h1 {
+  margin: 0.2em 0;
+  font-size: 2.2em;
+}
+
+h2 {
+  color: #444;
+  margin-bottom: 0.5em;
 }
 
 .about, .gallery, .contact {
-  padding: 2em 0;
+  padding: 3em 0;
+  background: #fff;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 10px;
+  gap: 15px;
   margin-top: 1em;
 }
 
 .image-grid img {
   width: 100%;
   border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
 }
 
 footer {
@@ -52,4 +67,19 @@ footer {
   color: #eee;
   padding: 1em;
   font-size: 0.9em;
+}
+
+footer a {
+  color: #ffce00;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.6em;
+  }
 }
