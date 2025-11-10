@@ -3,48 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kisan Cold Store</title>
+  <title>Banana Cold Store</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <h2 class="logo">🍌 Kisan Cold Store</h2>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Header Section -->
   <header>
-    <div class="container fade-in">
-      <img src="images/owner.jpg" alt="Owner Photo" class="owner-photo" />
-      <h1>Freshness Preserved with Care</h1>
-      <p>Your trusted partner in banana cold storage 🍌</p>
-      <a href="#contact" class="cta-button">Contact Us</a>
+    <div class="container header-content">
+      <img src="images/owner.jpg" alt="Owner" class="owner-image" />
+      <div>
+        <h1>Banana Cold Store</h1>
+        <p>Reliable Cold Storage & Banana Ripening Services</p>
+      </div>
     </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="about fade-in">
+  <section id="about" class="fade-in">
     <div class="container">
       <h2>About Us</h2>
       <p>
-        Welcome to <strong>Kisan Cold Store</strong> — a reliable and modern cold storage
-        facility designed to maintain the freshness and quality of bananas.
-        Our mission is to support local farmers and traders by providing efficient
-        storage solutions and professional care for every batch stored.
+        Welcome to Banana Cold Store — your trusted partner in maintaining the
+        freshness and quality of bananas. We specialize in temperature-controlled
+        storage and ripening facilities, ensuring your produce remains in
+        premium condition from farm to market.
       </p>
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section id="gallery" class="gallery fade-in">
+  <section id="gallery" class="fade-in">
     <div class="container">
       <h2>Gallery</h2>
       <div class="image-grid">
@@ -55,39 +40,47 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact fade-in">
+  <!-- 🟨 New Services Section -->
+  <section id="services" class="fade-in">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Cold Storage</h3>
+          <p>
+            Temperature-controlled chambers designed to preserve the freshness of bananas and other fruits for extended periods.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3>Transport</h3>
+          <p>
+            Reliable refrigerated transport ensuring your produce reaches the destination safely and in top condition.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3>Banana Ripening Chamber</h3>
+          <p>
+            Controlled ripening chambers with advanced humidity and temperature management to achieve uniform banana ripening.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Services Section -->
+
+  <section id="contact" class="fade-in">
     <div class="container">
       <h2>Contact Us</h2>
-      <p><strong>Owner:</strong> Mr. Sandeep Sangwan</p>
-      <p><strong>Phone:</strong> +91 89507 41929</p>
-      <p><strong>Address:</strong> Kisan Cold Store, Near Fun City, Ramgarh, Panchkula, Haryana</p>
-      <p><strong>Email:</strong> sangwans2.ss@gmail.com</p>
-      <a href="tel:+918950741929" class="cta-button">📞 Call Now</a>
+      <p>
+        📍 Location: Panchkula, Haryana<br />
+        📞 Phone: +91-9876543210<br />
+        ✉️ Email: info@bananacoldstore.com
+      </p>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>
-      © 2025 Kisan Cold Store | Designed by
-      <a href="https://chandergithub.github.io/store/" target="_blank">Shekhar</a>
-    </p>
+    <p>© 2025 Banana Cold Store. All rights reserved.</p>
   </footer>
-
-  <!-- Scroll Animation Script -->
-  <script>
-    const fadeElements = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.1 };
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('appear');
-        observer.unobserve(entry.target);
-      });
-    }, appearOptions);
-
-    fadeElements.forEach(el => appearOnScroll.observe(el));
-  </script>
 </body>
 </html>
